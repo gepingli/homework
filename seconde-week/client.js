@@ -1,4 +1,13 @@
+const css =require('css')
 const net = require('net');
+const parser = require('./parser');
+
+let rules=[];
+function addCSSRules(text){
+    var ast=css.parse(text);
+    // console.log(JSON.stringify(ast,null,4));
+    rules.push(...ast.stylesheet.rules);
+}
 
 class TrunkedBodyParser {
   constructor() {
@@ -206,5 +215,6 @@ void async function () {
     }
   });
   let response = await request.send();
-  console.log(response);
+  
+  let dom = parser.parseHTML(response.body);
 }();

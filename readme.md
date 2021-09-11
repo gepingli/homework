@@ -36,3 +36,18 @@ HTTP：
 - request
 - response
 
+## HTML
+
+html标准（包含html状态机）
+
+### 标签
+
+- 开始标签
+- 结束标签
+- 自封闭标签
+
+## CSS计算
+
+[ inline, id,  class, tag]
+
+
